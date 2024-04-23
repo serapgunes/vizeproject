@@ -227,7 +227,8 @@ Widget searchbox() => Container(
               SvgPicture.asset(
                       "assets/icons/magnifying-glass.svg",
                     height: 23,
-                    color: const Color.fromARGB(255, 171, 166, 166),),
+                    color: const Color.fromARGB(255, 171, 166, 166),
+                    ),
               SizedBox(
                 width: 10,
               ),
