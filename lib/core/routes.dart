@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:vizeproje/core/loader.dart';
 
 import '../screens/buy.dart';
 import '../screens/core/error.dart';
+import '../screens/core/loader.dart';
 import '../screens/giris.dart';
 import '../screens/homepage.dart';
 
