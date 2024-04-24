@@ -55,13 +55,13 @@ class _homepageState extends State<homepage> {
                   icon: Icon(Icons.favorite),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: IconButton(
-                  onPressed: () => GoRouter.of(context).push("/cart"),
-                  icon: Icon(Icons.shopping_cart),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(right: 8.0),
+              //   child: IconButton(
+              //     onPressed: () => GoRouter.of(context).push("/cart"),
+              //     icon: Icon(Icons.shopping_cart),
+              //   ),
+              // ),
             ],
           ),
           backgroundColor: Colors.white,
@@ -143,9 +143,10 @@ class _homepageState extends State<homepage> {
                           "assets/icons/trolley.svg",
                           height: 23,
                         ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/shop");
-                        },
+                        // onTap: () {
+                        //   Navigator.pushNamed(context, "/buy");
+                        // },
+                        onTap: () => context.push("/buy")
                       ),
                     ],
                   ),
