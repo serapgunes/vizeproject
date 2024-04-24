@@ -134,9 +134,10 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/credit-card.svg",
                           height: 23,
                         ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/bag");
-                        },
+                        // onTap: () {
+                        //   Navigator.pushNamed(context, "/payment");
+                        // },
+                        onTap: () => context.push("/payment")
                       ),
                       MenuItem(
                         title: "Sepetim",
@@ -144,8 +145,7 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/trolley.svg",
                           height: 23,
                         ),
-
-                        onTap: () => context.push("/buy")
+                        onTap: () => context.push("/cart")
                       ),
                     SwitchListTile(
                   value: clientCubit.state.darkMode,
