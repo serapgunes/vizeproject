@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:vizeproje/screens/client/profile.dart';
 import 'package:vizeproje/screens/core/loader.dart';
 
 import '../screens/buy.dart';
@@ -73,6 +74,10 @@ final routes = GoRouter(
     GoRoute(
       path: '/buy',
       builder: (context, state) => const buy(),
+    ),
+    GoRoute(
+      path: '/profile',
+      builder: (context, state) => ProfileScreen(),
     ),
   ],
 );

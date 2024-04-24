@@ -71,7 +71,7 @@ class _HomePageState extends State<homepage> {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, '/profil');
+                    Navigator.pushNamed(context, '/profile');
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(7.0),
@@ -85,6 +85,7 @@ class _HomePageState extends State<homepage> {
                         SizedBox(width: 8),
                         Text(
                           'Serap',
+                          
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
