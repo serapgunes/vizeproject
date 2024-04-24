@@ -77,7 +77,9 @@ class _BoardingScreenState extends State<BoardingScreen> {
         scrollDirection: Axis.horizontal,
         itemCount: boardingData.length,
         itemBuilder: (context, index) => Icon(
-            page == index ? CupertinoIcons.circle_filled: CupertinoIcons.circle,
+            page == index
+             ? CupertinoIcons.circle_filled
+             : CupertinoIcons.circle,
           ),),
     )
     ),
