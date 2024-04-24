@@ -147,6 +147,16 @@ class _HomePageState extends State<homepage> {
                         ),
                         onTap: () => context.push("/cart")
                       ),
+                      //deneme product
+                      MenuItem(
+                        title: "ürünler",
+                        icon: SvgPicture.asset(
+                          "assets/icons/trolley.svg",
+                          height: 23,
+                        ),
+                        onTap: () => context.push("/products")
+                      ),
+                      //deneme product
                     SwitchListTile(
                   value: clientCubit.state.darkMode,
                   onChanged: (value) {

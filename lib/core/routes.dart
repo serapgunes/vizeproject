@@ -52,7 +52,7 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: "/products",
-      builder: (context, state) => const ProductsScreen(),
+      builder: (context, state) => const ProductsScreen(), 
     ),
     GoRoute(
       path: "/favorites",
