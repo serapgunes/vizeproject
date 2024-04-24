@@ -3,6 +3,7 @@ import 'package:vizeproje/screens/core/loader.dart';
 
 import '../screens/buy.dart';
 import '../screens/core/error.dart';
+import '../screens/core/loader.dart';
 import '../screens/giris.dart';
 import '../screens/homepage.dart';
 import '../screens/core/error.dart';
