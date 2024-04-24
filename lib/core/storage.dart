@@ -1,9 +1,9 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vizeproje/models/payment_card.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
 
 class Storage {
-
-// Obtain shared preferences.
-
 
   Future<bool> isFirstLaunch() async{ //ilk calismaysa: ve await old zaman fonk asenkron olur
     final SharedPreferences storage = await SharedPreferences.getInstance();
@@ -55,5 +55,9 @@ class Storage {
     await storage.clear();
 
   }
+
+  loadCards() {}
+
+  saveCards(List<PaymentCard> yeniKartListesi) {}
 
 }
