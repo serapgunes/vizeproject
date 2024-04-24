@@ -1,19 +1,95 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-class homepage extends StatelessWidget {
-  const homepage({Key? key});
+import 'package:go_router/go_router.dart';
+import 'package:vizeproje/bloc/client/client_cubit.dart';
+
+import '../core/localizations.dart';
+//import 'package:vizeproje/screens/product/products.dart';
+//import 'package:vizeproje/bloc/client/client_cubit.dart';
+
+//import 'package:vizeproje/screens/homepage.dar';
+
+//import 'package:vizeproje/bloc/client/client_cubit.dart';
+
+  late ClientCubit clientCubit;
+
+class homepage extends StatefulWidget {
+  const homepage({super.key});
+
+  @override
+  State<homepage> createState() => _homepageState();
+}
+
+class _homepageState extends State<homepage> {
+  @override
+  void initState() {
+    super.initState();
+    clientCubit = context.read<ClientCubit>();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Image.asset(
-            'assets/images/logo.png',
-            height: 60,
+      // appBar: AppBar(
+      //   title: Center(
+      //     child: Image.asset(
+      //       'assets/images/logo.png',
+      //       height: 60,
+      //     ),
+      //   ),
+      // ),
+            appBar: AppBar(
+        title: Text(AppLocalizations.of(context).getTranslate("products")),
+        actions: [
+          if (clientCubit.state.darkMode)
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: IconButton(
+                  onPressed: () {
+                    clientCubit.changeDarkMode(darkMode: false);
+                  },
+                  icon: Icon(Icons.sunny)),
+            )
+          else
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: IconButton(
+                  onPressed: () {
+                    clientCubit.changeDarkMode(darkMode: true);
+                  },
+                  icon: Icon(Icons.nightlight)),
+            ),
+          Padding(
+            padding: const EdgeInsets.only(right: 2.0),
+            child: IconButton(
+              onPressed: () {
+                if (clientCubit.state.language == "tr") {
+                  clientCubit.changeLanguage(language: "en");
+                } else {
+                  clientCubit.changeLanguage(language: "tr");
+                }
+              },
+              icon: Icon(Icons.language),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(right: 2.0),
+            child: IconButton(
+              onPressed: () => GoRouter.of(context).push("/favorites"),
+              icon: Icon(Icons.favorite),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: IconButton(
+              onPressed: () => GoRouter.of(context).push("/cart"),
+              icon: Icon(Icons.shopping_cart),
+            ),
+          ),
+        ],
       ),
+     
       backgroundColor: Colors.white,
       drawer: Drawer(
         child: Column(
@@ -273,38 +349,6 @@ Widget header() => Container(
               ),
             ],
           ),
-          Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                padding: const EdgeInsets.all(8.0),
-                margin: const EdgeInsets.all(6.0),
-                child: Icon(
-                  Icons.sunny,
-                  color: Color.fromRGBO(236, 125, 87, 1),
-                  size: 18,
-                ),
-              ),
-              SizedBox(
-                width: 3,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                padding: const EdgeInsets.all(8.0),
-                margin: const EdgeInsets.all(6.0),
-                child: Icon(
-                  Icons.notifications,
-                  size: 18,
-                ),
-              ),
-            ],
-          ),
         ]),
       );
 
@@ -312,6 +356,7 @@ class MenuItem extends StatelessWidget {
   final Function()? onTap;
   final String title;
   final Widget icon;
+
 
   const MenuItem({
     Key? key,
