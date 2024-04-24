@@ -144,11 +144,9 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/trolley.svg",
                           height: 23,
                         ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/shop");
-                        },
+
+                        onTap: () => context.push("/buy")
                       ),
-                   
                     SwitchListTile(
                   value: clientCubit.state.darkMode,
                   onChanged: (value) {
