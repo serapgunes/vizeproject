@@ -29,19 +29,18 @@ class _HomePageState extends State<homepage> {
         return Scaffold(
           appBar: AppBar(
             title: Center(
-    child: Column(
-      children: [
-        Image.asset(
-          'assets/images/logo.png',
-          height: 60,
-        ),
-        //Text(
-          //AppLocalizations.of(context).getTranslate("homepage"),
-        //),
-      ],
-    ),
-  ),
-            
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/images/logo.png',
+                    height: 60,
+                  ),
+                  //Text(
+                  //AppLocalizations.of(context).getTranslate("homepage"),
+                  //),
+                ],
+              ),
+            ),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right: 2.0),
@@ -85,7 +84,6 @@ class _HomePageState extends State<homepage> {
                         SizedBox(width: 8),
                         Text(
                           'Serap',
-                          
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -130,63 +128,58 @@ class _HomePageState extends State<homepage> {
                         },
                       ),
                       MenuItem(
-                        title: "Kartlarım",
-                        icon: SvgPicture.asset(
-                          "assets/icons/credit-card.svg",
-                          height: 23,
-                        ),
-                        // onTap: () {
-                        //   Navigator.pushNamed(context, "/payment");
-                        // },
-                        onTap: () => context.push("/payment")
-                      ),
+                          title: "Kartlarım",
+                          icon: SvgPicture.asset(
+                            "assets/icons/credit-card.svg",
+                            height: 23,
+                          ),
+                          // onTap: () {
+                          //   Navigator.pushNamed(context, "/payment");
+                          // },
+                          onTap: () => context.push("/payment")),
                       MenuItem(
-                        title: "Sepetim",
-                        icon: SvgPicture.asset(
-                          "assets/icons/trolley.svg",
-                          height: 23,
-                        ),
-                        onTap: () => context.push("/cart")
-                      ),
+                          title: "Sepetim",
+                          icon: SvgPicture.asset(
+                            "assets/icons/trolley.svg",
+                            height: 23,
+                          ),
+                          onTap: () => context.push("/cart")),
                       //deneme product
                       MenuItem(
-                        title: "ürünler",
-                        icon: SvgPicture.asset(
-                          "assets/icons/trolley.svg",
-                          height: 23,
-                        ),
-                        onTap: () => context.push("/products")
-                      ),
+                          title: "ürünler",
+                          icon: SvgPicture.asset(
+                            "assets/icons/trolley.svg",
+                            height: 23,
+                          ),
+                          onTap: () => context.push("/products")),
                       //deneme product
-                    SwitchListTile(
-                  value: clientCubit.state.darkMode,
-                  onChanged: (value) {
-                    clientCubit.changeDarkMode(darkMode: value);
-                  },
-                  secondary: clientCubit.state.darkMode
-                      ? const Icon(Icons.sunny)
-                      : const Icon(Icons.nightlight),
-                  title: const Text('Gece Modu'),
-                ), 
-                SwitchListTile(
-  value: clientCubit.state.language == "tr",
-  onChanged: (_) {
-    if (clientCubit.state.language == "tr") {
-      clientCubit.changeLanguage(language: "en");
-    } else {
-      clientCubit.changeLanguage(language: "tr");
-    }
-  },
-  title: const Text("Dil Seçimi"),
-  subtitle: clientCubit.state.language == "tr"
-      ? const Text("English (United States)")
-      : const Text("Turkish (Turkiye)"),
-  secondary: const Icon(Icons.language),
-),
-],
+                      SwitchListTile(
+                        value: clientCubit.state.darkMode,
+                        onChanged: (value) {
+                          clientCubit.changeDarkMode(darkMode: value);
+                        },
+                        secondary: clientCubit.state.darkMode
+                            ? const Icon(Icons.sunny)
+                            : const Icon(Icons.nightlight),
+                        title: const Text('Gece Modu'),
+                      ),
+                      SwitchListTile(
+                        value: clientCubit.state.language == "tr",
+                        onChanged: (_) {
+                          if (clientCubit.state.language == "tr") {
+                            clientCubit.changeLanguage(language: "en");
+                          } else {
+                            clientCubit.changeLanguage(language: "tr");
+                          }
+                        },
+                        title: const Text("Dil Seçimi"),
+                        subtitle: clientCubit.state.language == "tr"
+                            ? const Text("English (United States)")
+                            : const Text("Turkish (Turkiye)"),
+                        secondary: const Icon(Icons.language),
+                      ),
+                    ],
                   ),
-
-                  
                 ),
                 Divider(),
                 MenuItem(
@@ -197,7 +190,6 @@ class _HomePageState extends State<homepage> {
                   },
                   title: "Çıkış",
                 ),
-            
               ],
             ),
           ),

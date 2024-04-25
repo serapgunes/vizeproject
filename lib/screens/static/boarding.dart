@@ -105,17 +105,17 @@ class BoardingScreen extends StatefulWidget {
 class _BoardingScreenState extends State<BoardingScreen> {
   final List<Map<String, String>> boardingData = [
     {
-      "image": "assets/images/onboarding1.png",
+      "image": "assets/images/asus.png",
       "title": "Keşfet",
       "description": "En yeni ürünleri keşfedin ve harika fırsatları yakalayın.",
     },
     {
-      "image": "assets/images/onboarding2.png",
+      "image": "assets/images/logo.png",
       "title": "Favorilerinizi Bulun",
       "description": "Favori ürünlerinizi kolayca bulun ve listelerinizi oluşturun.",
     },
     {
-      "image": "assets/images/onboarding3.png",
+      "image": "assets/images/vivo.png",
       "title": "Güvenli Alışveriş",
       "description": "Güvenli ödeme yöntemleri ile hızlı ve kolay alışveriş yapın.",
     },
@@ -131,7 +131,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
 
   void _navigateToHome(BuildContext context) async {
     final storage = Storage();
-    await storage.firstLaunch();
+    await storage.isFirstLaunch();
     GoRouter.of(context).replace('/homepage');
   }
 
