@@ -285,48 +285,42 @@ class _ProductsScreenState extends State<ProductsScreen> {
       "in-stock": false,
       "price": 0,
       "photo":
-          "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mu793tua-apple-iphone-15-pro-max-256gb-natural-titanium-638305576694571609.jpg",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
     {
       "id": 3,
       "name": "Asus VivoBook",
       "in-stock": true,
       "price": 35000.00,
       "photo":
-          "https://dlcdnwebimgs.asus.com/gain/a1e0bd3b-16cf-4f88-be0d-91a90e03ab0f/",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
     {
       "id": 4,
       "name": "Xiami X",
       "in-stock": true,
       "price": 15999.00,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
     {
       "id": 5,
       "name": "Samsung S23",
       "in-stock": false,
       "price": 0,
       "photo":
-          "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mu793tua-apple-iphone-15-pro-max-256gb-natural-titanium-638305576694571609.jpg",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
     {
       "id": 6,
       "name": "Lenovo X1",
       "in-stock": true,
       "price": 43000.00,
       "photo":
-          "https://dlcdnwebimgs.asus.com/gain/a1e0bd3b-16cf-4f88-be0d-91a90e03ab0f/",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
         {
       "id": 7,
       "name": "Deneme X1",
       "in-stock": true,
       "price": 43000.00,
       "photo":
-          "https://dlcdnwebimgs.asus.com/gain/a1e0bd3b-16cf-4f88-be0d-91a90e03ab0f/",
-    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
   ];
 
 
@@ -412,7 +406,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                              AssetImage('assets/images/avatar.jpeg'),
+                              AssetImage('assets/images/logo.jpeg'),
                           radius: 35,
                         ),
                         SizedBox(width: 8),
@@ -438,7 +432,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           height: 23,
                         ),
                         onTap: () {
-                          Navigator.pushNamed(context, "/home");
+                          Navigator.pushNamed(context, "/homepage");
                         },
                       ),
                       MenuItem(
