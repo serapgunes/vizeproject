@@ -105,7 +105,7 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/home.svg",
                           height: 23,
                         ),
-                        onTap: () => context.push("/profile"),
+                        onTap: () => context.push("/homepage"),
                       ),
                       MenuItem(
                         title: "Hakkımızda",
@@ -130,10 +130,7 @@ class _HomePageState extends State<homepage> {
                           icon: SvgPicture.asset(
                             "assets/icons/credit-card.svg",
                             height: 23,
-                          ),
-                          // onTap: () {
-                          //   Navigator.pushNamed(context, "/payment");
-                          // },
+                          ),                       
                           onTap: () => context.push("/payment")),
                       MenuItem(
                           title: "Sepetim",

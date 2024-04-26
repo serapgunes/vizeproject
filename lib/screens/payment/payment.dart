@@ -254,6 +254,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         ? Image.asset(
                                             "assets/icons/master_card.png",
                                             height: 60)
+                                         : cards[index].cardNo.startsWith("9")
+                                        ? Image.asset(
+                                            "assets/icons/troy_card.png",
+                                            height: 60)   
                                         : const SizedBox(),
                               ),
                               Positioned(
