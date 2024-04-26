@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
 import 'package:vizeproje/bloc/client/client_cubit.dart';
 import 'package:go_router/go_router.dart';
 
@@ -9,7 +7,6 @@ import '../../bloc/products/products_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/localizations.dart';
-import '../homepage.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({Key? key}) : super(key: key);
@@ -94,7 +91,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Geri Dön'),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),
@@ -109,9 +106,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
             ),
             itemCount: products.length,
             itemBuilder: (context, index) => InkWell(
-              onTap: () {
-                // Handle product tap
-              },
+              onTap: () {},
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -150,15 +145,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                   .getTranslate("free")
                               : "${products[index]["price"]} ₺",
                         ),
-                        // IconButton(
-                        //   onPressed: () {
-                        //     // Handle favorite button tap
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.favorite_border,
-                        //     color: Theme.of(context).colorScheme.secondary.withAlpha(50),
-                        //   ),
-                        // ),
                         Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

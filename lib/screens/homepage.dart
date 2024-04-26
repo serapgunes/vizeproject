@@ -71,7 +71,7 @@ class _HomePageState extends State<homepage> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Theme.of(context).colorScheme.background
                       ),
                     ),
                   ],
@@ -95,9 +95,7 @@ class _HomePageState extends State<homepage> {
                       "assets/icons/love.svg",
                       height: 23,
                     ),
-                    onTap: () {
-                      Navigator.pushNamed(context, "/clothes");
-                    },
+                    onTap: () => context.push("/favorites")
                   ),
                   MenuItem(
                       title: "Kartlarım",
@@ -142,148 +140,9 @@ class _HomePageState extends State<homepage> {
                         height: 22,
                       ),
                       onTap: () => context.push("/deneme")),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: Row(
-                  //     children: [
-                  //       IconButton(
-                  //         icon: Icon(Icons.settings),
-                  //         onPressed: () {
-                  //           showModalBottomSheet<void>(
-                  //             context: context,
-                  //             builder: (BuildContext context) {
-                  //               return Container(
-                  //                 // height: 200,
-                  //                 // color: Colors.white,
-                  //                 child: Column(
-                  //                   mainAxisAlignment: MainAxisAlignment.start,
-                  //                   children: <Widget>[
-                  //                     SizedBox(height: 40),
-                  //                     Icon(Icons.settings),
-                  //                     Text(
-                  //                       'Ayarlar',
-                  //                       style: TextStyle(fontSize: 20),
-                  //                     ),
-                  //                     SwitchListTile(
-                  //                       value: clientCubit.state.darkMode,
-                  //                       onChanged: (value) {
-                  //                         clientCubit.changeDarkMode(
-                  //                             darkMode: value);
-                  //                       },
-                  //                       secondary: clientCubit.state.darkMode
-                  //                           ? const Icon(Icons.sunny)
-                  //                           : const Icon(Icons.nightlight),
-                  //                       title: const Text('Gece Modu'),
-                  //                     ),
-                  //                     SwitchListTile(
-                  //                       value:
-                  //                           clientCubit.state.language == "tr",
-                  //                       onChanged: (_) {
-                  //                         if (clientCubit.state.language ==
-                  //                             "tr") {
-                  //                           clientCubit.changeLanguage(
-                  //                               language: "en");
-                  //                         } else {
-                  //                           clientCubit.changeLanguage(
-                  //                               language: "tr");
-                  //                         }
-                  //                       },
-                  //                       title: const Text("Dil Seçimi"),
-                  //                       subtitle: clientCubit.state.language ==
-                  //                               "tr"
-                  //                           ? const Text(
-                  //                               "English (United States)")
-                  //                           : const Text("Turkish (Turkiye)"),
-                  //                       secondary: const Icon(Icons.language),
-                  //                     ),
-                  //                     ElevatedButton(
-                  //                       onPressed: () {
-                  //                         Navigator.of(context).pop();
-                  //                       },
-                  //                       child: Text('Kapat'),
-                  //                     ),
-                  //                   ],
-                  //                 ),
-                  //               );
-                  //             },
-                  //           );
-                  //         },
-                  //         tooltip: "Ayarlar",
-                  //       ),
-                  //       Text("Ayarlar"),
-                  //     ],
-                  //   ),
-                  // ),
                 ],
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.all(8.0),
-            //   child: Row(
-            //     children: [
-            //       IconButton(
-            //         icon: Icon(Icons.settings),
-            //         onPressed: () {
-            //           showModalBottomSheet<void>(
-            //             context: context,
-            //             builder: (BuildContext context) {
-            //               return Container(
-            //                 // height: 200,
-            //                 // color: Colors.white,
-            //                 child: Column(
-            //                   mainAxisAlignment: MainAxisAlignment.start,
-            //                   children: <Widget>[
-            //                     SizedBox(height: 40),
-            //                     Icon(Icons.settings),
-            //                     Text(
-            //                       'Ayarlar',
-            //                       style: TextStyle(fontSize: 20),
-            //                     ),
-            //                     SwitchListTile(
-            //                       value: clientCubit.state.darkMode,
-            //                       onChanged: (value) {
-            //                         clientCubit.changeDarkMode(darkMode: value);
-            //                       },
-            //                       secondary: clientCubit.state.darkMode
-            //                           ? const Icon(Icons.sunny)
-            //                           : const Icon(Icons.nightlight),
-            //                       title: const Text('Gece Modu'),
-            //                     ),
-            //                     SwitchListTile(
-            //                       value: clientCubit.state.language == "tr",
-            //                       onChanged: (_) {
-            //                         if (clientCubit.state.language == "tr") {
-            //                           clientCubit.changeLanguage(
-            //                               language: "en");
-            //                         } else {
-            //                           clientCubit.changeLanguage(
-            //                               language: "tr");
-            //                         }
-            //                       },
-            //                       title: const Text("Dil Seçimi"),
-            //                       subtitle: clientCubit.state.language == "tr"
-            //                           ? const Text("English (United States)")
-            //                           : const Text("Turkish (Turkiye)"),
-            //                       secondary: const Icon(Icons.language),
-            //                     ),
-            //                     ElevatedButton(
-            //                       onPressed: () {
-            //                         Navigator.of(context).pop();
-            //                       },
-            //                       child: Text('Kapat'),
-            //                     ),
-            //                   ],
-            //                 ),
-            //               );
-            //             },
-            //           );
-            //         },
-            //         tooltip: "Ayarlar",
-            //       ),
-            //       Text("Ayarlar"),
-            //     ],
-            //   ),
-            // ),
             Padding(
   padding: const EdgeInsets.all(8.0),
   child: InkWell(
@@ -343,7 +202,7 @@ class _HomePageState extends State<homepage> {
     child: Row(
       children: [
         Icon(Icons.settings),
-        SizedBox(width: 8), // Araya boşluk ekleyebilirsiniz.
+        SizedBox(width: 8), 
         Text("Ayarlar"),
       ],
     ),
@@ -362,7 +221,6 @@ class _HomePageState extends State<homepage> {
           ],
         ),
       ),
-
       //drawer
       body: SingleChildScrollView(
         child: Column(

@@ -11,13 +11,12 @@ import '../screens/giris.dart';
 import '../screens/homepage.dart';
 import '../screens/core/settings.dart';
 import '../screens/payment/payment.dart';
-import '../screens/product/brands.dart';
+import '../screens/product/ProductDetails.dart';
 import '../screens/product/cart.dart';
 import '../screens/product/favorites.dart';
 
 import '../screens/product/products.dart';
 import '../screens/static/ip.dart';
-import '../silincek.dart';
 
 
 final routes = GoRouter(
@@ -35,11 +34,6 @@ final routes = GoRouter(
       path: '/payment',
       builder: (context, state) => const PaymentScreen(),
     ),
-    GoRoute(
-      path: '/brands',
-      builder: (context, state) => const BrandsScreen(),
-    ),
-  
     GoRoute(
       path: '/settings',
       builder: (context, state) => const SettingsScreen(),
@@ -72,7 +66,7 @@ final routes = GoRouter(
 
      GoRoute(
       path: '/silincek',
-      builder: (context, state) => BookScreen(),),
+      builder: (context, state) => ProductDetails(),),
 
     GoRoute(
       path: '/onboarding',

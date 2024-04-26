@@ -56,7 +56,7 @@ class _CategoryPageState extends State<CategoryPage> {
         ],
       ),
       //appbar
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

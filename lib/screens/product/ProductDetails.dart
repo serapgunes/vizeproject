@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class BookScreen extends StatelessWidget {
+class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Product Details'),
+        backgroundColor: Theme.of(context).colorScheme.background,
       ),
       body: ListView(
         padding: EdgeInsets.all(10),
@@ -22,7 +23,6 @@ class BookScreen extends StatelessWidget {
               metin:
                   'Yüksek performanslı işlemci, gelişmiş kamera sistemleri ve dayanıklı tasarımıyla iPhone 13, teknoloji tutkunları için ideal bir seçimdir. Her detayıyla özenle tasarlanmış olan bu akıllı telefon, kullanıcılarına üst düzey bir deneyim sunar.'),
           Gap(8),
-
           ProductWidget(
               urunAdi: 'Sony PlayStation 5',
               marka: 'Sony',
@@ -78,7 +78,8 @@ class BookScreen extends StatelessWidget {
                   'DJI Mavic Air 2, kompakt tasarımı ve yüksek çözünürlüklü kamerasıyla dikkat çeken bir drone modelidir. Uzun uçuş süresi, akıllı uçuş modları ve yüksek kaliteli video çekimi özellikleriyle kullanıcılarına mükemmel bir hava fotoğrafçılığı deneyimi sunar.'),
         ],
       ),
-    );
+    )
+    ;
   }
 }
 
@@ -347,6 +348,6 @@ class BookDetailsScreen extends StatelessWidget {
 
 void main() {
   runApp(MaterialApp(
-    home: BookScreen(),
+    home: ProductDetails(),
   ));
 }
