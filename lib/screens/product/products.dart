@@ -150,15 +150,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                   .getTranslate("free")
                               : "${products[index]["price"]} ₺",
                         ),
-                        // IconButton(
-                        //   onPressed: () {
-                        //     // Handle favorite button tap
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.favorite_border,
-                        //     color: Theme.of(context).colorScheme.secondary.withAlpha(50),
-                        //   ),
-                        // ),
+                       
                         Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
