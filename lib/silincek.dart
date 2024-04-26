@@ -14,77 +14,68 @@ class BookScreen extends StatelessWidget {
           Gap(8),
           //
           ProductWidget(
-  urunAdi: 'iPhone 13',
-  marka: 'Apple',
-  avatarImagePath: "assets/images/iphone13.jpg",
-  fiyat: '8000 TL',
-  musteriPuani: '4.5',
-  metin:
-    'Yüksek performanslı işlemci, gelişmiş kamera sistemleri ve dayanıklı tasarımıyla iPhone 13, teknoloji tutkunları için ideal bir seçimdir. Her detayıyla özenle tasarlanmış olan bu akıllı telefon, kullanıcılarına üst düzey bir deneyim sunar.'
-),
-Gap(8),
+              urunAdi: 'iPhone 13',
+              marka: 'Apple',
+              avatarImagePath: "assets/images/iphone13.jpg",
+              fiyat: '8000 TL',
+              musteriPuani: '4.5',
+              metin:
+                  'Yüksek performanslı işlemci, gelişmiş kamera sistemleri ve dayanıklı tasarımıyla iPhone 13, teknoloji tutkunları için ideal bir seçimdir. Her detayıyla özenle tasarlanmış olan bu akıllı telefon, kullanıcılarına üst düzey bir deneyim sunar.'),
+          Gap(8),
 
-ProductWidget(
-  urunAdi: 'Sony PlayStation 5',
-  marka: 'Sony',
-  avatarImagePath: "assets/images/ps5.jpg",
-  fiyat: '5000 TL',
-  musteriPuani: '4.9',
-  metin:
-    'Sony PlayStation 5, oyun dünyasında sınırları zorlayan bir deneyim sunar. Güçlü işlemcisi ve etkileyici grafikleriyle, en yeni oyunları sorunsuz bir şekilde oynamanızı sağlar. Ultra hızlı SSD depolama ve gelişmiş denetim özellikleriyle oyuncular için mükemmel bir seçenektir.'
-),
-Gap(8),
-ProductWidget(
-  urunAdi: 'Samsung Galaxy S22 Ultra',
-  marka: 'Samsung',
-  avatarImagePath: "assets/images/galaxy_s22_ultra.jpg",
-  fiyat: '9000 TL',
-  musteriPuani: '4.7',
-  metin:
-    'Samsung Galaxy S22 Ultra, yüksek performanslı işlemcisi, etkileyici kamera özellikleri ve şık tasarımıyla dikkat çekiyor. 8K video çekme, uzun pil ömrü ve büyük ekranıyla kullanıcılarına üstün bir deneyim sunuyor.'
-),
-Gap(8),
-ProductWidget(
-  urunAdi: 'Canon EOS R5',
-  marka: 'Canon',
-  avatarImagePath: "assets/images/canon_eos_r5.jpg",
-  fiyat: '15000 TL',
-  musteriPuani: '4.9',
-  metin:
-    'Canon EOS R5, profesyonel fotoğrafçılar ve fotoğraf meraklıları için üst düzey bir seçenektir. Yüksek çözünürlüklü fotoğraf ve video çekimi, hızlı otomatik odaklama ve geniş ISO aralığı gibi özellikleriyle dikkat çeker.'
-),
-Gap(8),
-ProductWidget(
-  urunAdi: 'Apple AirPods Pro',
-  marka: 'Apple',
-  avatarImagePath: "assets/images/airpods_pro.jpg",
-  fiyat: '1500 TL',
-  musteriPuani: '4.8',
-  metin:
-    'Apple AirPods Pro, gelişmiş aktif gürültü engelleme özelliği ve yüksek kaliteli ses performansıyla dikkat çekiyor. Şarj kutusuyla birlikte uzun pil ömrü sunar ve kablosuz şarj desteğiyle kullanım kolaylığı sağlar.'
-),
-Gap(8),
-ProductWidget(
-  urunAdi: 'Samsung Odyssey G9',
-  marka: 'Samsung',
-  avatarImagePath: "assets/images/odyssey_g9.jpg",
-  fiyat: '10000 TL',
-  musteriPuani: '4.9',
-  metin:
-    'Samsung Odyssey G9, geniş kavisli ekranı ve yüksek yenileme hızıyla oyun tutkunları için ideal bir monitördür. QLED teknolojisiyle canlı renkler sunar ve G-Sync uyumluluğuyla akıcı bir oyun deneyimi sağlar.'
-),
-Gap(8),
-ProductWidget(
-  urunAdi: 'DJI Mavic Air 2',
-  marka: 'DJI',
-  avatarImagePath: "assets/images/mavic_air_2.jpg",
-  fiyat: '6000 TL',
-  musteriPuani: '4.7',
-  metin:
-    'DJI Mavic Air 2, kompakt tasarımı ve yüksek çözünürlüklü kamerasıyla dikkat çeken bir drone modelidir. Uzun uçuş süresi, akıllı uçuş modları ve yüksek kaliteli video çekimi özellikleriyle kullanıcılarına mükemmel bir hava fotoğrafçılığı deneyimi sunar.'
-),
-
-      
+          ProductWidget(
+              urunAdi: 'Sony PlayStation 5',
+              marka: 'Sony',
+              avatarImagePath: "assets/images/ps5.jpg",
+              fiyat: '5000 TL',
+              musteriPuani: '4.9',
+              metin:
+                  'Sony PlayStation 5, oyun dünyasında sınırları zorlayan bir deneyim sunar. Güçlü işlemcisi ve etkileyici grafikleriyle, en yeni oyunları sorunsuz bir şekilde oynamanızı sağlar. Ultra hızlı SSD depolama ve gelişmiş denetim özellikleriyle oyuncular için mükemmel bir seçenektir.'),
+          Gap(8),
+          ProductWidget(
+              urunAdi: 'Samsung Galaxy S22 Ultra',
+              marka: 'Samsung',
+              avatarImagePath: "assets/images/galaxy_s22_ultra.jpg",
+              fiyat: '9000 TL',
+              musteriPuani: '4.7',
+              metin:
+                  'Samsung Galaxy S22 Ultra, yüksek performanslı işlemcisi, etkileyici kamera özellikleri ve şık tasarımıyla dikkat çekiyor. 8K video çekme, uzun pil ömrü ve büyük ekranıyla kullanıcılarına üstün bir deneyim sunuyor.'),
+          Gap(8),
+          ProductWidget(
+              urunAdi: 'Canon EOS R5',
+              marka: 'Canon',
+              avatarImagePath: "assets/images/canon_eos_r5.jpg",
+              fiyat: '15000 TL',
+              musteriPuani: '4.9',
+              metin:
+                  'Canon EOS R5, profesyonel fotoğrafçılar ve fotoğraf meraklıları için üst düzey bir seçenektir. Yüksek çözünürlüklü fotoğraf ve video çekimi, hızlı otomatik odaklama ve geniş ISO aralığı gibi özellikleriyle dikkat çeker.'),
+          Gap(8),
+          ProductWidget(
+              urunAdi: 'Apple AirPods Pro',
+              marka: 'Apple',
+              avatarImagePath: "assets/images/airpods_pro.jpg",
+              fiyat: '1500 TL',
+              musteriPuani: '4.8',
+              metin:
+                  'Apple AirPods Pro, gelişmiş aktif gürültü engelleme özelliği ve yüksek kaliteli ses performansıyla dikkat çekiyor. Şarj kutusuyla birlikte uzun pil ömrü sunar ve kablosuz şarj desteğiyle kullanım kolaylığı sağlar.'),
+          Gap(8),
+          ProductWidget(
+              urunAdi: 'Samsung Odyssey G9',
+              marka: 'Samsung',
+              avatarImagePath: "assets/images/odyssey_g9.jpg",
+              fiyat: '10000 TL',
+              musteriPuani: '4.9',
+              metin:
+                  'Samsung Odyssey G9, geniş kavisli ekranı ve yüksek yenileme hızıyla oyun tutkunları için ideal bir monitördür. QLED teknolojisiyle canlı renkler sunar ve G-Sync uyumluluğuyla akıcı bir oyun deneyimi sağlar.'),
+          Gap(8),
+          ProductWidget(
+              urunAdi: 'DJI Mavic Air 2',
+              marka: 'DJI',
+              avatarImagePath: "assets/images/mavic_air_2.jpg",
+              fiyat: '6000 TL',
+              musteriPuani: '4.7',
+              metin:
+                  'DJI Mavic Air 2, kompakt tasarımı ve yüksek çözünürlüklü kamerasıyla dikkat çeken bir drone modelidir. Uzun uçuş süresi, akıllı uçuş modları ve yüksek kaliteli video çekimi özellikleriyle kullanıcılarına mükemmel bir hava fotoğrafçılığı deneyimi sunar.'),
         ],
       ),
     );

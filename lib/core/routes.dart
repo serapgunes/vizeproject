@@ -4,6 +4,7 @@ import 'package:vizeproje/screens/core/loader.dart';
 import 'package:vizeproje/screens/onboarding_screen.dart';
 
 
+
 import '../screens/about.dart';
 import '../screens/core/error.dart';
 import '../screens/giris.dart';
@@ -83,5 +84,10 @@ final routes = GoRouter(
       builder: (context, state) => const about(),
 
     ),
+    // GoRoute(
+    //   path: '/deneme',
+    //   builder: (context, state) => ShopPage(),
+
+    // ),
   ],
 );
