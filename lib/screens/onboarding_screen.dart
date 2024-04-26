@@ -117,7 +117,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ? Padding(
                           padding: const EdgeInsets.all(30),
                           child: ElevatedButton(
-                            onPressed: () {GoRouter.of(context).replace('/homepage');},
+                            onPressed: () {GoRouter.of(context).replace('/products');},//homepage
                             child: const Text("START"),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color.fromARGB(255, 252, 252, 252),

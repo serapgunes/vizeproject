@@ -43,7 +43,7 @@ class _LoaderScreenState extends State<LoaderScreen> {
         const darkMode = ThemeMode.system == ThemeMode.dark;
         await storage.setConfig(darkMode: darkMode);
       }
-      GoRouter.of(context).replace("/home");
+      GoRouter.of(context).replace("/homepage");
     }
   }
 

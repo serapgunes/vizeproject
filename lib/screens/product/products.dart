@@ -185,10 +185,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       "assets/icons/home.svg",
                       height: 23,
                     ),
-                    onTap: () {
-                      Navigator.pushNamed(context, "/homepage");
-                    },
-                  ),
+                    onTap: () => context.push("/homepage")),
                   MenuItem(
                     title: "Hakkımızda",
                     icon: SvgPicture.asset(
@@ -205,9 +202,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       "assets/icons/love.svg",
                       height: 23,
                     ),
-                    onTap: () {
-                      Navigator.pushNamed(context, "/clothes");
-                    },
+                    onTap: () => context.push("/favorites"),
                   ),
                   MenuItem(
                       title: "Kartlarım",
