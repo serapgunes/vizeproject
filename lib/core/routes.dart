@@ -4,13 +4,9 @@ import 'package:vizeproje/screens/core/loader.dart';
 
 import '../screens/buy.dart';
 import '../screens/core/error.dart';
-import '../screens/core/loader.dart';
 import '../screens/giris.dart';
 import '../screens/homepage.dart';
-import '../screens/core/error.dart';
-import '../screens/core/loader.dart';
 import '../screens/core/settings.dart';
-import '../screens/homepage.dart';
 import '../screens/payment/payment.dart';
 import '../screens/product/brands.dart';
 import '../screens/product/cart.dart';
@@ -21,6 +17,7 @@ import '../screens/product/products.dart';
 
 import '../screens/static/boarding.dart';
 import '../screens/static/ip.dart';
+import '../silincek.dart';
 
 
 final routes = GoRouter(
@@ -78,6 +75,10 @@ final routes = GoRouter(
     GoRoute(
       path: '/profile',
       builder: (context, state) => ProfileScreen(),
+    ),
+     GoRoute(
+      path: '/silincek',
+      builder: (context, state) => BookScreen(),
     ),
   ],
 );

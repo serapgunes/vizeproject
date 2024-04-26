@@ -65,20 +65,22 @@ class _HomePageState extends State<homepage> {
             ],
           ),
           backgroundColor: Colors.white,
+          
           drawer: Drawer(
             child: Column(
               children: [
                 InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/profile');
-                  },
+                  //onTap: () {
+                  //  Navigator.pushNamed(context, '/profile');
+                  //},
+                  onTap: () => context.push("/profile"),
                   child: Padding(
                     padding: const EdgeInsets.all(7.0),
                     child: Row(
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                              AssetImage('assets/images/avatar.jpeg'),
+                              AssetImage('assets/images/logo.png'),
                           radius: 35,
                         ),
                         SizedBox(width: 8),

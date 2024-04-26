@@ -266,11 +266,8 @@ class ProductsScreen extends StatefulWidget {
   State<ProductsScreen> createState() => _ProductsScreenState();
 }
 
-
-
 class _ProductsScreenState extends State<ProductsScreen> {
-
-    var products = [
+  var products = [
     {
       "id": 1,
       "name": "MacBook Pro 2024 M2 Pro",
@@ -285,49 +282,53 @@ class _ProductsScreenState extends State<ProductsScreen> {
       "in-stock": false,
       "price": 0,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
     {
       "id": 3,
       "name": "Asus VivoBook",
       "in-stock": true,
       "price": 35000.00,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
     {
       "id": 4,
       "name": "Xiami X",
       "in-stock": true,
       "price": 15999.00,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
     {
       "id": 5,
       "name": "Samsung S23",
       "in-stock": false,
       "price": 0,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
     {
       "id": 6,
       "name": "Lenovo X1",
       "in-stock": true,
       "price": 43000.00,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
-        {
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
+    {
       "id": 7,
       "name": "Deneme X1",
       "in-stock": true,
       "price": 43000.00,
       "photo":
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",    },
+          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-m2-silver-202303?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1680103614090",
+    },
   ];
-
 
   late ProductsCubit productsCubit;
   late CartCubit cartCubit;
   late ClientCubit clientCubit;
-
 
   @override
   void initState() {
@@ -390,197 +391,206 @@ class _ProductsScreenState extends State<ProductsScreen> {
           ),
         ],
       ),
-     //sol menu baslangic /drawer
+      //sol menu baslangic /drawer
 
-     backgroundColor: Theme.of(context).backgroundColor,
-          drawer: Drawer(
-            child: Column(
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/profile');
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/logo.jpeg'),
-                          radius: 35,
-                        ),
-                        SizedBox(width: 8),
-                        Text(
-                          'Serap',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
+      backgroundColor: Theme.of(context).backgroundColor,
+      drawer: Drawer(
+        child: Column(
+          children: [
+            InkWell(
+              //onTap: () {
+              //  Navigator.pushNamed(context, '/profile');
+              //},
+              onTap: () => context.push("/profile"),
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/logo.png'),
+                      radius: 35,
                     ),
-                  ),
+                    SizedBox(width: 8),
+                    Text(
+                      'Serap',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      MenuItem(
-                        title: "AnaSayfa",
-                        icon: SvgPicture.asset(
-                          "assets/icons/home.svg",
-                          height: 23,
-                        ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/homepage");
-                        },
-                      ),
-                      MenuItem(
-                        title: "Hakkımızda",
-                        icon: SvgPicture.asset(
-                          "assets/icons/about.svg",
-                          height: 23,
-                        ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/about");
-                        },
-                      ),
-                      MenuItem(
-                        title: "Favoriler",
-                        icon: SvgPicture.asset(
-                          "assets/icons/love.svg",
-                          height: 23,
-                        ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/clothes");
-                        },
-                      ),
-                      MenuItem(
-                          title: "Kartlarım",
-                          icon: SvgPicture.asset(
-                            "assets/icons/credit-card.svg",
-                            height: 23,
-                          ),
-                          // onTap: () {
-                          //   Navigator.pushNamed(context, "/payment");
-                          // },
-                          onTap: () => context.push("/payment")),
-                      MenuItem(
-                          title: "Sepetim",
-                          icon: SvgPicture.asset(
-                            "assets/icons/trolley.svg",
-                            height: 23,
-                          ),
-                          onTap: () => context.push("/cart")),
-                      //deneme product
-                      MenuItem(
-                          title: "ürünler",
-                          icon: SvgPicture.asset(
-                            "assets/icons/trolley.svg",
-                            height: 23,
-                          ),
-                          onTap: () => context.push("/products")),
-                      //deneme product
-                      SwitchListTile(
-                        value: clientCubit.state.darkMode,
-                        onChanged: (value) {
-                          clientCubit.changeDarkMode(darkMode: value);
-                        },
-                        secondary: clientCubit.state.darkMode
-                            ? const Icon(Icons.sunny)
-                            : const Icon(Icons.nightlight),
-                        title: const Text('Gece Modu'),
-                      ),
-                      SwitchListTile(
-                        value: clientCubit.state.language == "tr",
-                        onChanged: (_) {
-                          if (clientCubit.state.language == "tr") {
-                            clientCubit.changeLanguage(language: "en");
-                          } else {
-                            clientCubit.changeLanguage(language: "tr");
-                          }
-                        },
-                        title: const Text("Dil Seçimi"),
-                        subtitle: clientCubit.state.language == "tr"
-                            ? const Text("English (United States)")
-                            : const Text("Turkish (Turkiye)"),
-                        secondary: const Icon(Icons.language),
-                      ),
-                       //deneme OutlinedButton
-                                    OutlinedButton(
-                  onPressed: () {
-                    showModalBottomSheet<void>(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return Container(
-                          // height: 200,
-                          // color: Colors.white,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Gap(40),
-                              Text(
-                                'This is a BottomSheet',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              SwitchListTile(
-                                value: clientCubit.state.darkMode,
-                                onChanged: (value) {
-                                  clientCubit.changeDarkMode(darkMode: value);
-                                },
-                                secondary: clientCubit.state.darkMode
-                                    ? const Icon(Icons.sunny)
-                                    : const Icon(Icons.nightlight),
-                                title: const Text('Gece Modu'),
-                              ),
-                              CheckboxListTile(
-                                value: clientCubit.state.darkMode,
-                                onChanged: (value) {
-                                  if (value == null)
-                                    clientCubit.changeDarkMode(darkMode: false);
-                                  else
-                                    clientCubit.changeDarkMode(darkMode: value);
-                                },
-                                secondary: clientCubit.state.darkMode
-                                    ? const Icon(Icons.sunny)
-                                    : const Icon(Icons.nightlight),
-                                title: const Text('Gece Modu'),
-                              ),
-                              ElevatedButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                                child: Text('Close BottomSheet'),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    );
-                  },
-                  child: const Text("Temel Ayarlar"),
-                ),
-                const Gap(10),
-                    //deneme OutlinedButton
-                    ],
-                  ),
-                ),
-                Divider(),
-                MenuItem(
-                  icon: Icon(Icons.logout_outlined),
-                  onTap: () {
-                    Navigator.pushNamedAndRemoveUntil(
-                        context, '/welcome', (route) => false);
-                  },
-                  title: "Çıkış",
-                ),
-              ],
+              ),
             ),
-          ), 
+            Expanded(
+              child: Column(
+                children: [
+                  MenuItem(
+                    title: "AnaSayfa",
+                    icon: SvgPicture.asset(
+                      "assets/icons/home.svg",
+                      height: 23,
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, "/homepage");
+                    },
+                  ),
+                  MenuItem(
+                    title: "Hakkımızda",
+                    icon: SvgPicture.asset(
+                      "assets/icons/about.svg",
+                      height: 23,
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, "/about");
+                    },
+                  ),
+                  MenuItem(
+                    title: "Favoriler",
+                    icon: SvgPicture.asset(
+                      "assets/icons/love.svg",
+                      height: 23,
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, "/clothes");
+                    },
+                  ),
+                  MenuItem(
+                      title: "Kartlarım",
+                      icon: SvgPicture.asset(
+                        "assets/icons/credit-card.svg",
+                        height: 23,
+                      ),
+                      // onTap: () {
+                      //   Navigator.pushNamed(context, "/payment");
+                      // },
+                      onTap: () => context.push("/payment")),
+                  MenuItem(
+                      title: "Sepetim",
+                      icon: SvgPicture.asset(
+                        "assets/icons/trolley.svg",
+                        height: 23,
+                      ),
+                      onTap: () => context.push("/cart")),
+                  //deneme product
+                  MenuItem(
+                      title: "ürünler",
+                      icon: SvgPicture.asset(
+                        "assets/icons/trolley.svg",
+                        height: 23,
+                      ),
+                      onTap: () => context.push("/products")
+                      ),
+                                        MenuItem(
+                          title: "silincek",
+                          icon: SvgPicture.asset(
+                            "assets/icons/trolley.svg",
+                            height: 23,
+                          ),
+                          onTap: () => context.push("/silincek")),
+                  //deneme product
+                  SwitchListTile(
+                    value: clientCubit.state.darkMode,
+                    onChanged: (value) {
+                      clientCubit.changeDarkMode(darkMode: value);
+                    },
+                    secondary: clientCubit.state.darkMode
+                        ? const Icon(Icons.sunny)
+                        : const Icon(Icons.nightlight),
+                    title: const Text('Gece Modu'),
+                  ),
+                  SwitchListTile(
+                    value: clientCubit.state.language == "tr",
+                    onChanged: (_) {
+                      if (clientCubit.state.language == "tr") {
+                        clientCubit.changeLanguage(language: "en");
+                      } else {
+                        clientCubit.changeLanguage(language: "tr");
+                      }
+                    },
+                    title: const Text("Dil Seçimi"),
+                    subtitle: clientCubit.state.language == "tr"
+                        ? const Text("English (United States)")
+                        : const Text("Turkish (Turkiye)"),
+                    secondary: const Icon(Icons.language),
+                  ),
+                  //deneme OutlinedButton
+                  OutlinedButton(
+                    onPressed: () {
+                      showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            // height: 200,
+                            // color: Colors.white,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Gap(40),
+                                Text(
+                                  'This is a BottomSheet',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                SwitchListTile(
+                                  value: clientCubit.state.darkMode,
+                                  onChanged: (value) {
+                                    clientCubit.changeDarkMode(darkMode: value);
+                                  },
+                                  secondary: clientCubit.state.darkMode
+                                      ? const Icon(Icons.sunny)
+                                      : const Icon(Icons.nightlight),
+                                  title: const Text('Gece Modu'),
+                                ),
+                                CheckboxListTile(
+                                  value: clientCubit.state.darkMode,
+                                  onChanged: (value) {
+                                    if (value == null)
+                                      clientCubit.changeDarkMode(
+                                          darkMode: false);
+                                    else
+                                      clientCubit.changeDarkMode(
+                                          darkMode: value);
+                                  },
+                                  secondary: clientCubit.state.darkMode
+                                      ? const Icon(Icons.sunny)
+                                      : const Icon(Icons.nightlight),
+                                  title: const Text('Gece Modu'),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Close BottomSheet'),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: const Text("Temel Ayarlar"),
+                  ),
+                  const Gap(10),
+                  //deneme OutlinedButton
+                ],
+              ),
+            ),
+            Divider(),
+            MenuItem(
+              icon: Icon(Icons.logout_outlined),
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/welcome', (route) => false);
+              },
+              title: "Çıkış",
+            ),
+          ],
+        ),
+      ),
       //sol menu bitis /drawer
-      
-      body:
-       BlocBuilder<ProductsCubit, ProductsState>(
+
+      body: BlocBuilder<ProductsCubit, ProductsState>(
         builder: (context, state) {
           return GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -596,10 +606,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Theme.of(context)
-                        .colorScheme
-                        .secondary
-                        .withAlpha(50),
+                    color:
+                        Theme.of(context).colorScheme.secondary.withAlpha(50),
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -631,38 +639,30 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                   .getTranslate("free")
                               : "${products[index]["price"]} ₺",
                         ),
-                        // IconButton(
-                        //   onPressed: () {
-                        //     // Handle favorite button tap
-                        //   },
-                        //   icon: Icon(
-                        //     Icons.favorite_border,
-                        //     color: Theme.of(context).colorScheme.secondary.withAlpha(50),
-                        //   ),
-                        // ),
                         Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(products[index]["name"].toString()),
-                        if (productsCubit
-                            .isFavorite(products[index]["id"] as int))
-                          IconButton(
-                              onPressed: () {
-                                productsCubit.removeFromFavorites(
-                                    products[index]["id"] as int);
-                              },
-                              icon: const Icon(
-                                Icons.favorite,
-                                color: Colors.red,
-                              ))
-                        else
-                          IconButton(
-                              onPressed: () {
-                                productsCubit.addToFavorites(products[index]);
-                              },
-                              icon: const Icon(Icons.favorite_border))
-                      ],
-                    ),
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(products[index]["name"].toString()),
+                            if (productsCubit
+                                .isFavorite(products[index]["id"] as int))
+                              IconButton(
+                                  onPressed: () {
+                                    productsCubit.removeFromFavorites(
+                                        products[index]["id"] as int);
+                                  },
+                                  icon: const Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                  ))
+                            else
+                              IconButton(
+                                  onPressed: () {
+                                    productsCubit
+                                        .addToFavorites(products[index]);
+                                  },
+                                  icon: const Icon(Icons.favorite_border))
+                          ],
+                        ),
                       ],
                     ),
                     ElevatedButton(
@@ -693,8 +693,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                     child: Text("Sepete Git"),
                                   ),
                                   ElevatedButton(
-                                    onPressed: () =>
-                                        GoRouter.of(context).pop(),
+                                    onPressed: () => GoRouter.of(context).pop(),
                                     child: Text("X"),
                                   ),
                                 ],
