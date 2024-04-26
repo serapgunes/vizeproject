@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:vizeproje/screens/client/profile.dart';
 import 'package:vizeproje/screens/core/loader.dart';
+import 'package:vizeproje/screens/onboarding_screen.dart';
 
 import '../screens/buy.dart';
 import '../screens/core/error.dart';
@@ -13,9 +14,6 @@ import '../screens/product/cart.dart';
 import '../screens/product/favorites.dart';
 
 import '../screens/product/products.dart';
-
-
-import '../screens/static/boarding.dart';
 import '../screens/static/ip.dart';
 import '../silincek.dart';
 
@@ -45,10 +43,6 @@ final routes = GoRouter(
       builder: (context, state) => const SettingsScreen(),
     ),
     GoRoute(
-      path: '/boarding',
-      builder: (context, state) => const BoardingScreen(),
-    ),
-    GoRoute(
       path: "/products",
       builder: (context, state) => const ProductsScreen(), 
     ),
@@ -76,9 +70,15 @@ final routes = GoRouter(
       path: '/profile',
       builder: (context, state) => ProfileScreen(),
     ),
+
      GoRoute(
       path: '/silincek',
-      builder: (context, state) => BookScreen(),
+      builder: (context, state) => BookScreen(),),
+
+    GoRoute(
+      path: '/onboarding',
+      builder: (context, state) => const OnboardingScreen(),
+
     ),
   ],
 );

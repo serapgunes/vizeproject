@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vizeproje/bloc/client/client_cubit.dart';
+import 'package:vizeproje/screens/product/products.dart';
 
 import '../core/localizations.dart';
 
@@ -70,10 +71,8 @@ class _HomePageState extends State<homepage> {
             child: Column(
               children: [
                 InkWell(
-                  //onTap: () {
-                  //  Navigator.pushNamed(context, '/profile');
-                  //},
-                  onTap: () => context.push("/profile"),
+                                          onTap: () => context.push("/profile"),
+
                   child: Padding(
                     padding: const EdgeInsets.all(7.0),
                     child: Row(
@@ -105,9 +104,7 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/home.svg",
                           height: 23,
                         ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/home");
-                        },
+                        onTap: () => context.push("/profile"),
                       ),
                       MenuItem(
                         title: "Hakkımızda",
@@ -202,6 +199,7 @@ class _HomePageState extends State<homepage> {
                 searchBox(),
                 titleItem("clots", "View all"),
                 nearLocation(),
+                ProductsScreen(),
               ],
             ),
           ),
