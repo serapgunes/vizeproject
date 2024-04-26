@@ -137,7 +137,7 @@ class _HomePageState extends State<homepage> {
                       onTap: () => context.push("/about")),
                   Gap(5),
                   MenuItem(
-                      title: "Deneme",
+                      title: "Hata Sayfası",
                       icon: SvgPicture.asset(
                         "assets/icons/file.svg",
                         height: 22,
