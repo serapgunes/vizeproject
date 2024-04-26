@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vizeproje/bloc/client/client_cubit.dart';
+import 'package:vizeproje/core/localizations.dart';
 import 'package:vizeproje/screens/product/CategoryPage.dart';
 
 class homepage extends StatefulWidget {
@@ -82,7 +83,7 @@ class _HomePageState extends State<homepage> {
               child: Column(
                 children: [
                   MenuItem(
-                    title: "AnaSayfa",
+                    title: "Anasayfa",
                     icon: SvgPicture.asset(
                       "assets/icons/home.svg",
                       height: 23,
@@ -114,7 +115,7 @@ class _HomePageState extends State<homepage> {
                       ),
                       onTap: () => context.push("/cart")),
                   MenuItem(
-                      title: "ürünler",
+                      title: "Ürünler",
                       icon: SvgPicture.asset(
                         "assets/icons/shop.svg",
                         height: 23,
@@ -298,9 +299,7 @@ class _HomePageState extends State<homepage> {
                 SizedBox(height: 40),
                 Icon(Icons.settings),
                 Text(
-                  'Ayarlar',
-                  style: TextStyle(fontSize: 20),
-                ),
+                        AppLocalizations.of(context).getTranslate("Ayarlar")),
                 SwitchListTile(
                   value: clientCubit.state.darkMode,
                   onChanged: (value) {
@@ -323,7 +322,7 @@ class _HomePageState extends State<homepage> {
                     }
                   },
                   title: const Text("Dil Seçimi"),
-                  subtitle: clientCubit.state.language == "tr"
+                  subtitle: clientCubit.state.language == "en"
                       ? const Text("English (United States)")
                       : const Text("Turkish (Turkiye)"),
                   secondary: const Icon(Icons.language),
@@ -344,7 +343,8 @@ class _HomePageState extends State<homepage> {
       children: [
         Icon(Icons.settings),
         SizedBox(width: 8), // Araya boşluk ekleyebilirsiniz.
-        Text("Ayarlar"),
+        Text(
+                        AppLocalizations.of(context).getTranslate("Ayarlar")),
       ],
     ),
   ),
@@ -637,7 +637,7 @@ class MenuItem extends StatelessWidget {
           children: [
             icon,
             SizedBox(width: 6),
-            Text(title),
+            Text( AppLocalizations.of(context).getTranslate(title)),
           ],
         ),
       ),

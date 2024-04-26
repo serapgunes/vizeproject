@@ -13,5 +13,15 @@
     "settings": "Settings",
     "connection-error": "Please control your internet connection.",
     "reload": "Reload",
-    "select-language": "Please select language:"
+    "select-language": "Please select language:",
+    "Hakkımızda":"About",
+    "Favoriler":"Favorites",
+    "Anasayfa":"Homepage",
+    "Ürünler":"Products",
+    "Kartlarım":"Payment",
+    "Sepetim":"Basket",
+    "Ürün Detayları":"Products Details",
+    "Ayarlar":"Settings",
+    "Çıkış":"Exit"
+
 }

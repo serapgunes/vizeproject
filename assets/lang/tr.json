@@ -13,5 +13,14 @@
     "settings": "Ayarlar",
     "connection-error": "Lutfen Internet Baglantinizi Kontrol Ediniz.",
     "reload": "Yenile",
-    "select-language": "Lutfen Istediginiz Dili Seciniz:"
+    "select-language": "Lutfen Istediginiz Dili Seciniz:",
+    "Hakkımızda":"Hakkımızda",
+    "Favoriler":"Favoriler",
+    "Anasayfa":"Anasayfa",
+    "Ürünler":"Ürünler",
+    "Kartlarım":"Kartlarım",
+    "Sepetim":"Sepetim",
+    "Ürün Detayları":"Ürün Detayları",
+    "Ayarlar":"Ayarlar",
+    "Çıkış":"Çıkış"
 }
