@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 class giris extends StatelessWidget {
   const giris({Key? key});
 
@@ -44,13 +44,12 @@ class giris extends StatelessWidget {
               ),
               SizedBox(height: 20.0),
               ElevatedButton(
-                onPressed: () {Navigator.pushNamedAndRemoveUntil(context, '/homepage', (Route<dynamic> route) => false);},
+                onPressed: () {GoRouter.of(context).replace('/homepage');},
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                  padding: EdgeInsets.symmetric(vertical: 16.0), backgroundColor: Color.fromARGB(255, 242, 112, 162),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  //primary: Color.fromARGB(255, 242, 112, 162),
                 ),
                 child: Text(
                   'Giriş Yap',
@@ -80,4 +79,3 @@ class giris extends StatelessWidget {
     );
   }
 }
-

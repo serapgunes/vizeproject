@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:vizeproje/bloc/client/client_cubit.dart';
 import 'package:vizeproje/screens/product/products.dart';
-
+import 'package:gap/gap.dart';
 import '../core/localizations.dart';
 
 class homepage extends StatefulWidget {
@@ -84,7 +85,7 @@ class _HomePageState extends State<homepage> {
                         ),
                         SizedBox(width: 8),
                         Text(
-                          'Serap',
+                          'Serap & Ceylan',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -143,41 +144,89 @@ class _HomePageState extends State<homepage> {
                             height: 23,
                           ),
                           onTap: () => context.push("/cart")),
-                      //deneme product
                       MenuItem(
                           title: "ürünler",
                           icon: SvgPicture.asset(
-                            "assets/icons/trolley.svg",
+                            "assets/icons/shop.svg",
                             height: 23,
                           ),
                           onTap: () => context.push("/products")),
-                      //deneme product
-                      SwitchListTile(
-                        value: clientCubit.state.darkMode,
-                        onChanged: (value) {
-                          clientCubit.changeDarkMode(darkMode: value);
-                        },
-                        secondary: clientCubit.state.darkMode
-                            ? const Icon(Icons.sunny)
-                            : const Icon(Icons.nightlight),
-                        title: const Text('Gece Modu'),
-                      ),
-                      SwitchListTile(
-                        value: clientCubit.state.language == "tr",
-                        onChanged: (_) {
-                          if (clientCubit.state.language == "tr") {
-                            clientCubit.changeLanguage(language: "en");
-                          } else {
-                            clientCubit.changeLanguage(language: "tr");
-                          }
-                        },
-                        title: const Text("Dil Seçimi"),
-                        subtitle: clientCubit.state.language == "tr"
-                            ? const Text("English (United States)")
-                            : const Text("Turkish (Turkiye)"),
-                        secondary: const Icon(Icons.language),
-                      ),
+                       MenuItem(
+                          title: "Ürün Detayları",
+                          icon: SvgPicture.asset(
+                            "assets/icons/file.svg",
+                            height: 22,
+                          ),
+                          onTap: () => context.push("/silincek")),
+                     
+               Padding(
+  padding: const EdgeInsets.all(8.0),
+  child: Row(
+    children: [
+      IconButton(
+      
+        icon: Icon(Icons.settings),
+        onPressed: () {
+          showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return Container(
+                // height: 200,
+                // color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(height: 40),
+                    Icon(Icons.settings),
+                    Text(
+                      'Ayarlar',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SwitchListTile(
+                      value: clientCubit.state.darkMode,
+                      onChanged: (value) {
+                        clientCubit.changeDarkMode(darkMode: value);
+                      },
+                      secondary: clientCubit.state.darkMode
+                          ? const Icon(Icons.sunny)
+                          : const Icon(Icons.nightlight),
+                      title: const Text('Gece Modu'),
+                    ),
+                    SwitchListTile(
+                      value: clientCubit.state.language == "tr",
+                      onChanged: (_) {
+                        if (clientCubit.state.language == "tr") {
+                          clientCubit.changeLanguage(language: "en");
+                        } else {
+                          clientCubit.changeLanguage(language: "tr");
+                        }
+                      },
+                      title: const Text("Dil Seçimi"),
+                      subtitle: clientCubit.state.language == "tr"
+                          ? const Text("English (United States)")
+                          : const Text("Turkish (Turkiye)"),
+                      secondary: const Icon(Icons.language),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text('Kapat'),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
+        tooltip: "Ayarlar",
+      ),
+      Text("Ayarlar"),
+    ],
+  ),
+)
                     ],
+                    
                   ),
                 ),
                 Divider(),
@@ -194,20 +243,59 @@ class _HomePageState extends State<homepage> {
           ),
           body: SingleChildScrollView(
             child: Column(
-              children: [
+              children: [       
                 header(),
                 searchBox(),
                 titleItem("clots", "View all"),
                 nearLocation(),
-                ProductsScreen(),
-              ],
+                SizedBox(height: 200,),
+                //ProductsScreen(),
+                 Container(
+              width: double.infinity,
+              height: 60,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                color: Colors.black12,
+              )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Icon(Icons.home, size: 28, color: Colors.black87),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Icon(Icons.search, size: 28, color: Colors.black87),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Icon(Icons.smart_display,
+                        size: 28, color: Colors.black87),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child:
+                        Icon(Icons.favorite, size: 28, color: Colors.black87),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Icon(Icons.person, size: 28, color: Colors.black87),
+                  ),
+                ],
+              ),
             ),
-          ),
-        );
-      },
+          ],
+        ),
+      ),
     );
+      }
+        );
   }
-}
+    
+  
+             
+  }
 
 Widget nearLocation() => Container(
       child: Column(
@@ -229,6 +317,7 @@ Widget nearLocation() => Container(
                 SizedBox(width: 8),
                 locationItem("assets/images/logo.png"),
                 SizedBox(width: 8),
+                
               ],
             ),
           ),
@@ -364,16 +453,16 @@ Widget header() => Container(
     );
 
 class MenuItem extends StatelessWidget {
-  final Function()? onTap;
-  final String title;
-  final Widget icon;
-
   const MenuItem({
     Key? key,
     required this.title,
     required this.icon,
     required this.onTap,
   }) : super(key: key);
+
+  final Function()? onTap;
+  final Widget icon;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
