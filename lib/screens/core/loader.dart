@@ -28,7 +28,7 @@ class _LoaderScreenState extends State<LoaderScreen> {
       await storage.setConfig(
           language: getDeviceLanguage(), darkMode: darkMode);
 
-      GoRouter.of(context).replace("/boarding");
+      GoRouter.of(context).replace("/onboarding");
     } else {
       // ana ekrana git
       // navigate to home screen
