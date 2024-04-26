@@ -22,7 +22,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
     var products = [
     {
       "id": 1,
-      "name": "MacBook Pro",
+      "name": "Asus",
       "in-stock": true,
       "price": 65000.00,
       "photo":
@@ -44,32 +44,54 @@ class _ProductsScreenState extends State<ProductsScreen> {
           "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
     {
       "id": 4,
-      "name": "Xiami X",
+      "name": "Asus",
       "in-stock": true,
       "price": 15999.00,
       "photo":
           "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
     {
       "id": 5,
-      "name": "Samsung",
+      "name": "Asus",
       "in-stock": false,
       "price": 30000,
       "photo":
           "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
     {
       "id": 6,
-      "name": "Lenovo X1",
+      "name": "Asus",
       "in-stock": true,
       "price": 43000.00,
       "photo":
           "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
         {
       "id": 7,
-      "name": "Deneme X1",
+      "name": "Asus",
       "in-stock": true,
       "price": 43000.00,
       "photo":
           "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
+        {
+      "id": 8,
+      "name": "Asus",
+      "in-stock": true,
+      "price": 43000.00,
+      "photo":
+          "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
+        {
+      "id": 9,
+      "name": "Asus",
+      "in-stock": true,
+      "price": 43000.00,
+      "photo":
+          "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
+        {
+      "id": 10,
+      "name": "Asus",
+      "in-stock": true,
+      "price": 43000.00,
+      "photo":
+          "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/14862/uploads/urunresimleri/buyuk/asus-vivobook-flip-14-14-dokunmatik-ek-6ff-06.jpg",    },
+
   ];
 
 

@@ -18,11 +18,10 @@ class ProductsCubit extends Cubit<ProductsState> {
     }
 
     if (found) {
-      // urun favori listede zaten mevcut
-      // eklemeye gerek yok
+      
     } else {
       currentFavorites.add(product);
-      // yeni durum hazirliyorum
+      
       final updatedState = ProductsState(
         favorites: currentFavorites,
       );
@@ -37,7 +36,7 @@ class ProductsCubit extends Cubit<ProductsState> {
     var currentFavorites = state.favorites;
 
     if (currentFavorites.any((element) => element["id"] == product["id"])) {
-      // zaten var favori de o urun
+      
     } else {
       currentFavorites.add(product);
       final newState = ProductsState(favorites: currentFavorites);

@@ -72,7 +72,7 @@ class _HomePageState extends State<homepage> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.background
+                        color: Colors.black,
                       ),
                     ),
                   ],
@@ -126,7 +126,15 @@ class _HomePageState extends State<homepage> {
                         height: 22,
                       ),
                       onTap: () => context.push("/silincek")),
-                                        MenuItem(
+                    MenuItem(
+                      title: "Hata Sayfası",
+                      icon: SvgPicture.asset(
+                        "assets/icons/404.svg",
+                        height: 22,
+                      ),
+                      onTap: () => context.push("/deneme")),
+                                        
+                  MenuItem(
                       title: "Hakkımızda",
                       icon: SvgPicture.asset(
                         "assets/icons/about.svg",
@@ -134,14 +142,7 @@ class _HomePageState extends State<homepage> {
                       ),
                       onTap: () => context.push("/about")),
                   Gap(5),
-                  MenuItem(
-                      title: "Hata Sayfası",
-                      icon: SvgPicture.asset(
-                        "assets/icons/file.svg",
-                        height: 22,
-                      ),
-                      onTap: () => context.push("/deneme")),
-
+                  
                 ],
               ),
             ),
