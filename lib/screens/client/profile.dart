@@ -48,14 +48,14 @@ class ProfileScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'Henry Luca',
+                        'Serap & Ceylan',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
                       ),
                       Text(
-                        'loopdesignagency@gmail.com',
+                        'serapceylan@gmail.com',
                         style: TextStyle(
                           color: Colors.grey,
                         ),

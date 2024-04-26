@@ -113,9 +113,7 @@ class _HomePageState extends State<homepage> {
                           "assets/icons/about.svg",
                           height: 23,
                         ),
-                        onTap: () {
-                          Navigator.pushNamed(context, "/about");
-                        },
+                        onTap: () => context.push("/about")
                       ),
                       MenuItem(
                         title: "Favoriler",

@@ -3,7 +3,8 @@ import 'package:vizeproje/screens/client/profile.dart';
 import 'package:vizeproje/screens/core/loader.dart';
 import 'package:vizeproje/screens/onboarding_screen.dart';
 
-import '../screens/buy.dart';
+
+import '../screens/about.dart';
 import '../screens/core/error.dart';
 import '../screens/giris.dart';
 import '../screens/homepage.dart';
@@ -62,10 +63,7 @@ final routes = GoRouter(
       path: '/giris',
       builder: (context, state) => const giris(),
     ),
-    GoRoute(
-      path: '/buy',
-      builder: (context, state) => const buy(),
-    ),
+    
     GoRoute(
       path: '/profile',
       builder: (context, state) => ProfileScreen(),
@@ -78,6 +76,11 @@ final routes = GoRouter(
     GoRoute(
       path: '/onboarding',
       builder: (context, state) => const OnboardingScreen(),
+
+    ),
+    GoRoute(
+      path: '/about',
+      builder: (context, state) => const about(),
 
     ),
   ],
